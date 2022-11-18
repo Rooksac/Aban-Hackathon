@@ -8,12 +8,14 @@ import ArtMediaContainer from './Components/ArtMedia/ArtMediaContainer';
 import VictimsContainer from './Components/Victims/VictimsContainer';
 
 function App() {
+
   const [english, setEnglish] = useState(true)
   const [data, setData] = useState([])
   
   function handleLanguageChange(){
     setEnglish(prev => !prev);
   }
+
 
   let language = '/englishes';
 
@@ -28,6 +30,7 @@ function App() {
   .then((res) => res.json())
   .then(data => setData(data))}, [english])
   console.log(data)
+
   return (
     <div className="App">
       <React.Fragment>
