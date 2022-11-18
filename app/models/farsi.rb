@@ -1,0 +1,2 @@
+class Farsi < ApplicationRecord
+end
