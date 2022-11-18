@@ -1,5 +1,5 @@
 class EnglishesController < ApplicationController
-    before_action :find_english, only(:show, :delete, :update)
+    before_action :find_english, only: [:show, :delete, :update]
     def index
         english = English.all
         render json: english

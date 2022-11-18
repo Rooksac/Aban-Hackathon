@@ -1,5 +1,5 @@
 class FarsisController < ApplicationController
-    before_action :find_farsi, only (:show, :update, :destroy)
+    before_action :find_farsi, only: [:show, :update, :destroy]
     def index
         farsi = Farsi.all
         render json: farsi
