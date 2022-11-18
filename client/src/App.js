@@ -8,7 +8,10 @@ import ArtMediaContainer from './Components/ArtMedia/ArtMediaContainer';
 import VictimsContainer from './Components/Victims/VictimsContainer';
 
 function App() {
+  let language = '/englishes'
   
+
+  fetch(`${language}`)
 
   return (
     <div className="App">
