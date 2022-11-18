@@ -6,7 +6,9 @@ class CreateFarsis < ActiveRecord::Migration[7.0]
       t.string :date
       t.string :location
       t.string :cause
-
+      t.string :image_small
+      t.string :image_large
+      
       t.timestamps
     end
   end
