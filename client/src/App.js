@@ -8,15 +8,33 @@ import ArtMediaContainer from './Components/ArtMedia/ArtMediaContainer';
 import VictimsContainer from './Components/Victims/VictimsContainer';
 
 function App() {
-  let language = '/englishes'
-  
 
-  fetch(`${language}`)
+  const [english, setEnglish] = useState(true)
+  const [data, setData] = useState([])
+  
+  function handleLanguageChange(){
+    setEnglish(prev => !prev);
+  }
+
+
+  let language = '/englishes';
+
+  if(english){
+    language = '/englishes'
+  } else {
+    language = '/farsis'
+  }
+  
+  useEffect(() => {
+    fetch(`${language}`)
+  .then((res) => res.json())
+  .then(data => setData(data))}, [english])
+  console.log(data)
 
   return (
     <div className="App">
       <React.Fragment>
-        <ToggleSwitch label="Language" />
+        <ToggleSwitch label="Language" handleLanguageChange={handleLanguageChange}/>
       </React.Fragment>
       <Navbar />
      <Routes>
