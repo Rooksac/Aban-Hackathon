@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+.image {
+    z-index: -1;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    opacity: .9;
+}
+
+.main-div-background {
+    background-color: black;
+    height: 92vh;
+    opacity: .8;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    padding-top: 3vh;
+}
+
