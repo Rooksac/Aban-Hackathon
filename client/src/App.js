@@ -13,6 +13,8 @@ function App() {
   const [english, setEnglish] = useState(true)
   const [data, setData] = useState([])
   
+  let firstSixData = data.slice(0,6);
+  console.log(firstSixData)
   function handleLanguageChange(){
     setEnglish(prev => !prev);
   }
@@ -33,6 +35,7 @@ function App() {
   console.log(data)
 
   return (
+    <>
     <div className="App">
       <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Protests_against_Ukraine_International_Airlines_Flight_752_shot_down_by_Sepah_in_Tehran_7.jpg" className='image'/>
       {/* <React.Fragment>
@@ -41,14 +44,18 @@ function App() {
       <div className='main-div-background'>
       <Navbar  handleLanguageChange={handleLanguageChange} english={english}/>
      <Routes>
-      <Route path = '/home' element = {<HomeContainer english={english}/>} className='home-styling'/>
+      <Route path = '/home' element = {<HomeContainer english={english} firstSixData={firstSixData}/>} className='home-styling'/>
       <Route path = '/media' element = {<ArtMediaContainer />} />
-      <Route path = '/victims' element = {<VictimsContainer />} />
+      <Route path = '/victims' element = {<VictimsContainer data={data}/>} />
       <Route path = '/admin' element = {<AdminLogin />} />
       <Route path = '/newentryform' element = {<AdminPage />} />
      </Routes>
      </div>
     </div>
+    <div>
+
+    </div>
+    </>
   );
 }
 
