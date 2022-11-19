@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import "./Home.css";
-
+import VictimPreviewContainer from './VictimPreviewContainer';
 
 
 export default function HomeContainer() {
@@ -14,23 +14,26 @@ export default function HomeContainer() {
 
   let i = 0;
   const [wordData,setWordData]=useState(words[i].value)
-  
-  // const handleClick=(index)=>{
-  //   console.log(index)
-  //   const wordSlider=words[index].value;
-  //   setWordData(wordSlider)
-  // }
-  const handleClick=()=>{
-    if(i < words.length){
+
+  const handleNextClick=()=>{
+    if(i <= words.length){
       i++; 
       console.log(i)
       setWordData(words[i].value)
       console.log(wordData)
-    }
-    if(i = words.length){
+    } else {
       i = 0;
       setWordData(words[i].value);
     }
+  }
+
+  const handlePrevClick=()=>{
+    if(i > 0){
+      i--; 
+      console.log(i)
+      setWordData(words[i].value)
+      console.log(wordData)
+    } 
   }
 
   return (
@@ -39,7 +42,10 @@ export default function HomeContainer() {
       <h1>What happened?</h1>
       <div className='flex_row'>
       <p className='summary'>{wordData}</p>
-          <button onClick={()=>handleClick()} className='next-button'> Next </button>
+        <div className='prev-next-buttons'>
+          <button onClick={()=>handlePrevClick()} className='next-prev-button'> Previous </button>
+          <button onClick={()=>handleNextClick()} className='next-prev-button'> Next </button>
+        </div>
       </div>
     </div>
      </div>
