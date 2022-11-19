@@ -39,9 +39,9 @@ function App() {
         <ToggleSwitch label="Language" handleLanguageChange={handleLanguageChange}/>
       </React.Fragment> */}
       <div className='main-div-background'>
-      <Navbar  handleLanguageChange={handleLanguageChange}/>
+      <Navbar  handleLanguageChange={handleLanguageChange} english={english}/>
      <Routes>
-      <Route path = '/home' element = {<HomeContainer />} className='home-styling'/>
+      <Route path = '/home' element = {<HomeContainer english={english}/>} className='home-styling'/>
       <Route path = '/media' element = {<ArtMediaContainer />} />
       <Route path = '/victims' element = {<VictimsContainer />} />
       <Route path = '/admin' element = {<AdminLogin />} />
