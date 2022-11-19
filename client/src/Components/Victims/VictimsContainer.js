@@ -1,7 +1,10 @@
 import React from 'react'
+import AllVictimsCards from './AllVictimsCards'
 
-export default function VictimsContainer() {
+export default function VictimsContainer({data}) {
   return (
-    <div>VictimsContainer</div>
+    <div>
+      <AllVictimsCards data={data}/>
+    </div>
   )
 }

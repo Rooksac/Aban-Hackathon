@@ -41,3 +41,53 @@
   .summary {
     font-size: 1.2rem;
   }
+
+  .victims-preview-container {
+    background-color: black;
+    margin-top: 8vh;
+    padding-left: auto;
+    padding-right: auto;
+    height: 40vh;
+    width: 100%;
+    padding-top: 5%;
+  }
+
+  .victims-link {
+    color: white;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin: auto;
+    padding-top: 2rem;
+    text-decoration: none;
+    text-decoration: underline white;
+  }
+
+  .victims-link:hover {
+    color: red;
+  }
+
+  .victim-preview-cards {
+    width: 100%;
+    height:70%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .each-preview-card {
+    background-color: rgb(72, 72, 72);
+    width: 12vw;
+  }
+
+  .each-victim-preview-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .victim-name-preview {
+    background-color: rgb(72, 72, 72);
+    margin-top: 2vh;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+  }
