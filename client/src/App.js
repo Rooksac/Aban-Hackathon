@@ -6,6 +6,8 @@ import ToggleSwitch from './Components/ToggleSwitch';
 import HomeContainer from './Components/Home/HomeContainer';
 import ArtMediaContainer from './Components/ArtMedia/ArtMediaContainer';
 import VictimsContainer from './Components/Victims/VictimsContainer';
+import AdminPage from './Components/AdminPage';
+import AdminLogin from './Components/AdminLogin';
 
 function App() {
   let language = '/englishes'
@@ -23,6 +25,8 @@ function App() {
       <Route path = '/home' element = {<HomeContainer />} />
       <Route path = '/media' element = {<ArtMediaContainer />} />
       <Route path = '/victims' element = {<VictimsContainer />} />
+      <Route path = '/admin' element = {<AdminLogin />} />
+      <Route path = '/newentryform' element = {<AdminPage />} />
      </Routes>
     </div>
   );
