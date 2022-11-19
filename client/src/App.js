@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 import {Route, Routes} from "react-router-dom";
 import './App.css';
 import Navbar from './Components/Navbar'
-import ToggleSwitch from './Components/ToggleSwitch';
 import HomeContainer from './Components/Home/HomeContainer';
 import ArtMediaContainer from './Components/ArtMedia/ArtMediaContainer';
 import VictimsContainer from './Components/Victims/VictimsContainer';
@@ -35,17 +34,20 @@ function App() {
 
   return (
     <div className="App">
-      <React.Fragment>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Protests_against_Ukraine_International_Airlines_Flight_752_shot_down_by_Sepah_in_Tehran_7.jpg" className='image'/>
+      {/* <React.Fragment>
         <ToggleSwitch label="Language" handleLanguageChange={handleLanguageChange}/>
-      </React.Fragment>
-      <Navbar />
+      </React.Fragment> */}
+      <div className='main-div-background'>
+      <Navbar  handleLanguageChange={handleLanguageChange}/>
      <Routes>
-      <Route path = '/home' element = {<HomeContainer />} />
+      <Route path = '/home' element = {<HomeContainer />} className='home-styling'/>
       <Route path = '/media' element = {<ArtMediaContainer />} />
       <Route path = '/victims' element = {<VictimsContainer />} />
       <Route path = '/admin' element = {<AdminLogin />} />
       <Route path = '/newentryform' element = {<AdminPage />} />
      </Routes>
+     </div>
     </div>
   );
 }
