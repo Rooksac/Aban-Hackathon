@@ -2,10 +2,10 @@
   width: 60vw;
   height: 70vh;
   margin: auto;
-  margin-top: 3vh;
+  /* margin-top: 3vh; */
   text-align: center;
   color: red;
-  padding-top: 4rem;
+  padding-top: 2rem;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -42,6 +42,11 @@
     font-size: 1.2rem;
   }
 
+  .home-text-div {
+    height: 68vh;
+    overflow: scroll;
+  }
+  
   .victims-preview-container {
     background-color: black;
     margin-top: 8vh;

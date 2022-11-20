@@ -23,6 +23,7 @@ function App() {
       {/* <React.Fragment>
         <ToggleSwitch label="Language" handleLanguageChange={handleLanguageChange}/>
       </React.Fragment> */}
+      <div className='main-div-wrapper'>
       <div className='main-div-background'>
       <Navbar  handleLanguageChange={handleLanguageChange} english={english}/>
      <Routes>
@@ -32,6 +33,7 @@ function App() {
       <Route path = '/admin' element = {<AdminLogin />} />
       <Route path = '/newentryform' element = {<AdminPage />} />
      </Routes>
+     </div>
      </div>
     </div>
     <div>

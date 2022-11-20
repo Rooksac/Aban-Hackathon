@@ -44,14 +44,15 @@ export default function HomeContainer({english}) {
     <>
     <div className='home-div'>
       <div className='home-text-div'>
-      <h1>What happened?</h1>
+      <h1>{english ? "What happened?" : "چی شد؟"}</h1>
       <div className='flex_row'>
       <p className='summary'>{words[index].value}</p>
         <div className='prev-next-buttons'>
-          <button onClick={()=>handlePrevClick()} className='next-prev-button'> Previous </button>
-          <button onClick={()=>handleNextClick()} className='next-prev-button'> Next </button>
+          <button onClick={()=>handlePrevClick()} className='next-prev-button'>{english ? "Previous" : "قبلی" }</button>
+          <button onClick={()=>handleNextClick()} className='next-prev-button'>{english ? "Next" : "بعد" }</button>
         </div>
       </div>
+      <VictimPreviewContainer firstSixData={firstSixData} english={english}/>
     </div>
      </div>
      <VictimPreviewContainer english = {english}/>

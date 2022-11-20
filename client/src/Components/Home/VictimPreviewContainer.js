@@ -21,7 +21,7 @@ export default function VictimPreviewContainer({english}) {
     <div className='victims-preview-container'>
       <div className = 'victim-preview-cards'>
         {previewData.map(victim=><VictimsPreviewCards key = {victim.id} victim = {victim}/>)}
-        <Link to="/victims" className='victims-link'><h4>Learn more about victims</h4></Link>
+        <Link to="/victims" className='victims-link'><h4>{english ? "Learn more about victims" : "درباره قربانیان بیشتر بدانید"}</h4></Link>
       </div>
     </div>
   )
