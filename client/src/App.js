@@ -15,7 +15,7 @@ function App() {
   function handleLanguageChange(){
     setEnglish(prev => !prev);
   }
-  
+
   return (
     <>
     <div className="App">
@@ -29,7 +29,7 @@ function App() {
      <Routes>
       <Route path = '/home' element = {<HomeContainer english={english} />} className='home-styling'/>
       <Route path = '/media' element = {<ArtMediaContainer />} />
-      <Route path = '/victims' element = {<VictimsContainer />} />
+      <Route path = '/victims' element = {<VictimsContainer english = {english}/>} />
       <Route path = '/admin' element = {<AdminLogin />} />
       <Route path = '/newentryform' element = {<AdminPage />} />
      </Routes>
