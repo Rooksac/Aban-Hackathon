@@ -20,27 +20,23 @@ export default function HomeContainer({english, firstSixData}) {
     ]
   }
 
-  let i = 0;
-  const [wordData,setWordData]=useState(words[i].value)
-
+  
+  const [index,setIndex]=useState(0)
+  
   const handleNextClick=()=>{
-    if(i <= words.length){
-      i++; 
-      console.log(i)
-      setWordData(words[i].value)
-      console.log(wordData)
+    if(index < words.length-1){
+      setIndex(index+ 1); 
+      console.log(index)
     } else {
-      i = 0;
-      setWordData(words[i].value);
+      setIndex(0);
+      console.log(index)
     }
   }
 
   const handlePrevClick=()=>{
-    if(i > 0){
-      i--; 
-      console.log(i)
-      setWordData(words[i].value)
-      console.log(wordData)
+    if(index > 0){
+      setIndex(index-1); 
+      console.log(index)
     } 
   }
 
@@ -50,7 +46,7 @@ export default function HomeContainer({english, firstSixData}) {
       <div className='home-text-div'>
       <h1>What happened?</h1>
       <div className='flex_row'>
-      <p className='summary'>{wordData}</p>
+      <p className='summary'>{words[index].value}</p>
         <div className='prev-next-buttons'>
           <button onClick={()=>handlePrevClick()} className='next-prev-button'> Previous </button>
           <button onClick={()=>handleNextClick()} className='next-prev-button'> Next </button>
