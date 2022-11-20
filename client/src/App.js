@@ -11,29 +11,11 @@ import AdminLogin from './Components/AdminLogin';
 function App() {
 
   const [english, setEnglish] = useState(true)
-  const [data, setData] = useState([])
-  
-  let firstSixData = data.slice(0,6);
-  console.log(firstSixData)
+
   function handleLanguageChange(){
     setEnglish(prev => !prev);
   }
-
-
-  let language = '/englishes';
-
-  if(english){
-    language = '/englishes'
-  } else {
-    language = '/farsis'
-  }
   
-  useEffect(() => {
-    fetch(`${language}`)
-  .then((res) => res.json())
-  .then(data => setData(data))}, [english])
-  console.log(data)
-
   return (
     <>
     <div className="App">
@@ -44,9 +26,9 @@ function App() {
       <div className='main-div-background'>
       <Navbar  handleLanguageChange={handleLanguageChange} english={english}/>
      <Routes>
-      <Route path = '/home' element = {<HomeContainer english={english} firstSixData={firstSixData}/>} className='home-styling'/>
+      <Route path = '/home' element = {<HomeContainer english={english} />} className='home-styling'/>
       <Route path = '/media' element = {<ArtMediaContainer />} />
-      <Route path = '/victims' element = {<VictimsContainer data={data}/>} />
+      <Route path = '/victims' element = {<VictimsContainer />} />
       <Route path = '/admin' element = {<AdminLogin />} />
       <Route path = '/newentryform' element = {<AdminPage />} />
      </Routes>

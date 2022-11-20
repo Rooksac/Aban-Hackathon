@@ -9,6 +9,7 @@ class EnglishesController < ApplicationController
     end
     def update
         @english.update!(english_params)
+        render json: @english
     end
     def destroy
         @english.destroy!
@@ -16,6 +17,11 @@ class EnglishesController < ApplicationController
     end
     def create
         english = English.create(english_params)
+        render json: english
+    end
+
+    def preview
+        english = English.limit(5)
         render json: english
     end
     private

@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   
   post '/login', to: 'admins#login'
   get '/me', to: 'admins#me'
+  get '/previewenglish', to: 'englishes#preview'
+  get '/previewfarsi', to: 'farsis#preview'
 end

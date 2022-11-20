@@ -3,7 +3,7 @@ import "./Home.css";
 import VictimPreviewContainer from './VictimPreviewContainer';
 
 
-export default function HomeContainer({english, firstSixData}) {
+export default function HomeContainer({english}) {
 
   let words;
   if(english) { words = [
@@ -54,7 +54,7 @@ export default function HomeContainer({english, firstSixData}) {
       </div>
     </div>
      </div>
-     <VictimPreviewContainer firstSixData={firstSixData}/>
+     <VictimPreviewContainer english = {english}/>
     </>
   )
 }
