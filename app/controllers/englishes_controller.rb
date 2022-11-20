@@ -21,7 +21,7 @@ class EnglishesController < ApplicationController
     end
 
     def preview
-        english = English.limit(5)
+        english = English.limit(6)
         render json: english
     end
     private

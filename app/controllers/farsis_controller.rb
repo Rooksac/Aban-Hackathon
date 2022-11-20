@@ -19,7 +19,7 @@ class FarsisController < ApplicationController
         render json: farsi
     end
     def preview
-        farsi = Farsi.limit(5)
+        farsi = Farsi.limit(6)
         render json: farsi
     end
     private
