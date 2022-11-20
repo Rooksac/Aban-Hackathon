@@ -3,6 +3,7 @@ body {
     border: 0;
     padding: 0;
 }
+
 .image {
     z-index: -1;
     position: fixed;
@@ -18,5 +19,12 @@ body {
     margin-left: 5vw;
     margin-right: 5vw;
     padding-top: 3vh;
+    overflow: scroll;
 }
+
+.main-div-wrapper {
+    padding-top: 2.5vh;
+    padding-bottom: 2.5vh;
+}
+
 

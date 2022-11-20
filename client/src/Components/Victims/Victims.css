@@ -1,0 +1,18 @@
+.each-victim-card {
+    background-color: rgb(72, 72, 72);
+    width: 12vw;
+    height: 30vh;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+.all-victims-div {
+    height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    width: 70vw;
+    margin: auto;
+    margin-top: 4vh;
+    height: 68vh;
+    overflow: scroll;
+}
