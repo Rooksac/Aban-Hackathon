@@ -9,8 +9,9 @@ CSV.foreach('tmp/Abanhackathonenglish.csv', headers: true) do |row|
         age: row[2],
         date: row[3],
         location: row[4],
-        image_small: row[5],
-        image_large: row[6]
+        cause: row[5],
+        image_small: row[6],
+        image_large: row[7]
     )
 end
 puts 'done seeding english'
@@ -21,8 +22,9 @@ CSV.foreach('tmp/Abanhackathonfarsi.csv', headers: true) do |row|
         age: row[2],
         date: row[3],
         location: row[4],
-        image_small: row[5],
-        image_large: row[6]
+        cause: row[5],
+        image_small: row[6],
+        image_large: row[7]
     )
 end
 puts 'done seeding farsi'

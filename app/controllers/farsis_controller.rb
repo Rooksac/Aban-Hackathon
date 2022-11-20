@@ -18,6 +18,10 @@ class FarsisController < ApplicationController
         farsi = Farsi.create(english_params)
         render json: farsi
     end
+    def preview
+        farsi = Farsi.limit(5)
+        render json: farsi
+    end
     private
     def find_farsi
         @farsi = Farsi.find(params[:id])
