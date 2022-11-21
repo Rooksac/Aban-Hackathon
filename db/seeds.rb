@@ -6,7 +6,7 @@ Artwork.destroy_all
 SupportforProtestor.destroy_all
 puts 'seeding english'
 
-CSV.foreach('tmp/Abanhackathonenglish.csv', headers: true) do |row|
+CSV.foreach('public/Abanhackathonenglish.csv', headers: true) do |row|
     English.create(
         name: row[1],
         age: row[2],
@@ -19,7 +19,7 @@ CSV.foreach('tmp/Abanhackathonenglish.csv', headers: true) do |row|
 end
 puts 'done seeding english'
 puts 'seeding farsi'
-CSV.foreach('tmp/Abanhackathonfarsi.csv', headers: true) do |row|
+CSV.foreach('public/Abanhackathonfarsi.csv', headers: true) do |row|
     Farsi.create(
         name: row[1],
         age: row[2],

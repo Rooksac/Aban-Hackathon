@@ -4,6 +4,7 @@ import VictimsPreviewCard from './VictimsPreviewCard'
 
 export default function VictimPreviewContainer({english}) {
   const [previewData, setPreviewData] = useState([])
+  //determines which language data to retrieve from backend
   let language = '/previewenglish';
 
   if(english){
@@ -16,7 +17,6 @@ export default function VictimPreviewContainer({english}) {
     fetch(`${language}`)
   .then((res) => res.json())
   .then(data => setPreviewData(data))}, [english])
-  console.log(previewData)
   return (
     <div className='victims-preview-container'>
       <div className='victims-card-container'>
