@@ -5,7 +5,7 @@ export default function AllVictimsCards({victim}) {
     <div>
             <div className='each-victim-card'>
             <img src={victim.image_large} className='each-victim-preview-image'/>
-            <h4 className='victim-name-preview'>{victim.name}</h4>
+            <h4 className='all-names'>{victim.name}</h4>
             </div>
     </div>
   )
