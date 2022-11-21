@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom';
-import VictimsPreviewCards from './VictimsPreviewCard'
+import VictimsPreviewCard from './VictimsPreviewCard'
 
 export default function VictimPreviewContainer({english}) {
   const [previewData, setPreviewData] = useState([])

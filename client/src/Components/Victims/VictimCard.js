@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function AllVictimsCards({victim}) {
+export default function VictimCard({victim}) {
   return (
     <div>
             <div className='each-victim-card'>
