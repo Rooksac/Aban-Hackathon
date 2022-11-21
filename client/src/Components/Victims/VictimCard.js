@@ -1,9 +1,8 @@
 import React, {useState} from 'react'
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-import { textAlign } from '@mui/system';
+
 
 export default function VictimCard({victim}) {
   const style = {
@@ -16,7 +15,8 @@ export default function VictimCard({victim}) {
     border: '2px solid #000',
     boxShadow: 24,
     p: 4,
-    textAlign: 'center'
+    textAlign: 'center',
+    color: 'white'
   };
   const [open, setOpen] = useState(false);
   function handleOpen(){
