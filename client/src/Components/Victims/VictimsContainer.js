@@ -14,11 +14,11 @@ export default function VictimsContainer({ english }) {
   //holds the age range to filter by
   const [ageFilter, setAgeFilter] = useState("");
   //contols language of the data we fetch
-  let language = "/englishes";
+  let language = "/api/englishes";
   if (english) {
-    language = "/englishes";
+    language = "/api/englishes";
   } else {
-    language = "/farsis";
+    language = "/api/farsis";
   }
   //captures string to search by in state
   function handleSearchChange(e) {
@@ -70,7 +70,7 @@ export default function VictimsContainer({ english }) {
   }
   //fetches data based on language
   useEffect(() => {
-    fetch(`/api${language}`)
+    fetch(`${language}`)
       .then((res) => res.json())
       .then((data) => {
         setData(data);
