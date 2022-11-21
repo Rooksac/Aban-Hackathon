@@ -1,9 +1,10 @@
 .container {
     text-align: center;
+    color: transparent;
   }
   .toggle-switch {
     position: relative;
-    width: 75px;
+    width: 90px;
     display: inline-block;
     text-align: left;
     top: 8px;
@@ -44,16 +45,16 @@
   .inner:after {
     content: "FARSI";
     padding-right: 10px;
-    background-color: #bbb;
+    background-color: red;
     color: #fff;
-    text-align: right;
+    text-align: center;
   }
   .switch {
     display: block;
     width: 24px;
     margin: 5px;
     background: #fff;
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     bottom: 0;
     right: 40px;

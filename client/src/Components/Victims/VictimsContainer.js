@@ -79,15 +79,17 @@ export default function VictimsContainer({english}) {
 
     
   return (
-    <div>
-      <input type='text' value={search} onChange = {handleSearchChange} placeholder = 'search by name or location' />
-      <select value = {ageFilter} onChange={handleAgeChange}>
+    <div className='whole-victims-container'>
+    <div className='search-bars'>
+      <input type='text' value={search} onChange = {handleSearchChange} placeholder = 'search by name or location' className='search-field'/>
+      <select value = {ageFilter} onChange={handleAgeChange} className='search-age'>
         <option value='all'>All ages</option>
         <option value='17'>17 and under</option>
         <option value = '34'>18-34</option>
         <option value = '54'>35-54</option>
         <option value='over'>55 and over</option>
       </select>
+      </div>
       <div className='all-victims-div'>
         {displayData.map(victim => <VictimCard  key = {victim.id} victim = {victim}/>)}
       </div>

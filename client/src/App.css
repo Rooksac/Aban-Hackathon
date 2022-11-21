@@ -13,15 +13,20 @@ body {
 }
 
 .main-div-background {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.797);
     height: 92vh;
-    opacity: .8;
     margin-left: 5vw;
     margin-right: 5vw;
     padding-top: 3vh;
     overflow: scroll;
 }
-
+.each-victim-preview-image {
+background-color: black;
+  }
+.each-victim-preview-image img {
+    width: 100%;
+    max-height: 8rem;
+}
 .main-div-wrapper {
     padding-top: 2.5vh;
     padding-bottom: 2.5vh;
