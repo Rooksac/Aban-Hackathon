@@ -13,6 +13,8 @@ export default function VictimCard({victim}) {
     transform: 'translate(-50%, -50%)',
     width: 400,
     backgroundColor: 'black',
+    opacity: '.9',
+    color: 'white',
     border: '2px solid #000',
     boxShadow: 24,
     p: 4,
