@@ -4,12 +4,12 @@ import VictimsPreviewCard from './VictimsPreviewCard'
 
 export default function VictimPreviewContainer({english}) {
   const [previewData, setPreviewData] = useState([])
-  let language = '/api/previewenglish';
+  let language = '/previewenglish';
 
   if(english){
-    language = '/api/previewenglish'
+    language = '/previewenglish'
   } else {
-    language = '/api/previewfarsi'
+    language = '/previewfarsi'
   }
   
   useEffect(() => {

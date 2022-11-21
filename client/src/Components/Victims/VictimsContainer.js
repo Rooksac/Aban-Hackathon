@@ -14,11 +14,11 @@ export default function VictimsContainer({ english }) {
   //holds the age range to filter by
   const [ageFilter, setAgeFilter] = useState("");
   //contols language of the data we fetch
-  let language = "/api/englishes";
+  let language = "/englishes";
   if (english) {
-    language = "/api/englishes";
+    language = "/englishes";
   } else {
-    language = "/api/farsis";
+    language = "/farsis";
   }
   //captures string to search by in state
   function handleSearchChange(e) {
