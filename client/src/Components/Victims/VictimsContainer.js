@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import VictimCard from './VictimCard'
 import "./Victims.css";
 
+
 export default function VictimsContainer({english}) {
   //holds the full set of data
   const [data, setData] = useState([])
