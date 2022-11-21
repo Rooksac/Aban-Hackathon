@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import { textAlign } from '@mui/system';
 
 export default function VictimCard({victim}) {
   const style = {
@@ -11,10 +12,11 @@ export default function VictimCard({victim}) {
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: 400,
-    bgcolor: 'background.paper',
+    backgroundColor: 'black',
     border: '2px solid #000',
     boxShadow: 24,
     p: 4,
+    textAlign: 'center'
   };
   const [open, setOpen] = useState(false);
   function handleOpen(){
@@ -29,8 +31,7 @@ export default function VictimCard({victim}) {
             <div className='each-victim-preview-image'>
             <img src={victim.image_large} />
             </div>
-            <h4 className='all-names'>{victim.name}</h4>
-            <Button onClick={handleOpen}>More info</Button>
+            <h4 className='all-names' onClick={handleOpen}>{victim.name}</h4>
             </div>
       <Modal
         open={open}
@@ -38,11 +39,11 @@ export default function VictimCard({victim}) {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
+        <Box className = 'modal-box' sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
             {victim.name}
           </Typography>
-          <img src={victim.image_small}/>
+          <img src={victim.image_large}/>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             Age: {victim.age} <br/>
             Date of death: {victim.date} <br/>
