@@ -5,31 +5,35 @@ import "./Victims.css";
 export default function VictimsContainer({english}) {
   //holds the full set of data
   const [data, setData] = useState([])
+  //data being displayed
   const [displayData, setDisplayData] = useState([])
+  //data filtered by age
   const [ageArray, setAgeArray] = useState([])
+  //holds the string to filter search by
   const [search, setSearch] = useState('')
+  //holds the age range to filter by
   const [ageFilter, setAgeFilter] = useState('')
+  //contols language of the data we fetch
   let language = '/englishes';
-
   if(english){
     language = '/englishes'
   } else {
     language = '/farsis'
   }
-
+//captures string to search by in state
   function handleSearchChange(e){
     setSearch(e.target.value)
   }
-
+//filters displayed data based on search string
   function onSearch(){
     let newArray = ageArray.filter((v)=> v.name.toLowerCase().includes(search.toLowerCase())||v.location.toLowerCase().includes(search.toLowerCase()))
     setDisplayData(newArray)
   }
-
+//captures age range to search by in state
   function handleAgeChange(e){
     setAgeFilter(e.target.value)
   }
-
+//filters displayed data based on age
   function onAgeChange(){
     let newArray;
     switch (ageFilter) {
@@ -57,7 +61,7 @@ export default function VictimsContainer({english}) {
     }
     
   }
-  
+  //fetches data based on language
   useEffect(() => {
     fetch(`${language}`)
     .then((res) => res.json())
