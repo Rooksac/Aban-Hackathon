@@ -13,7 +13,7 @@ export default function VictimPreviewContainer({english}) {
   }
   
   useEffect(() => {
-    fetch(`${language}`)
+    fetch(`/api${language}`)
   .then((res) => res.json())
   .then(data => setPreviewData(data))}, [english])
   console.log(previewData)
