@@ -2,6 +2,8 @@
     background-color: rgb(72, 72, 72);
     width: 12vw;
     height: 20vh;
+    min-width: 7rem;
+    min-height: 8rem;
     margin: auto;
     margin-bottom: 4rem;
 }
@@ -16,6 +18,7 @@
     margin-top: 4vh;
     height: 68vh;
     overflow: scroll;
+    gap: 1rem;
 }
 
 .all-names {
@@ -31,4 +34,41 @@
 
 .all-names:hover {
     color: red;
+}
+
+.search-bars {
+    width: 15vw;
+    display: inline;
+    text-align: center;
+    margin-left: 32vw;
+    margin-right: 32vw;
+    margin-top: 2vh;
+}
+
+.search-field {
+    margin-left: .5rem;
+    margin-right: .5rem;
+    background-color: transparent;
+    font-family: 'Roboto', sans-serif;
+    color: red;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid white;
+}
+
+.search-age {
+    margin-left: .5rem;
+    margin-right: .5rem;
+    background-color: transparent;
+    font-family: 'Roboto', sans-serif;
+    color: red;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+.whole-victims-container {
+    margin-top: 1rem;
 }
