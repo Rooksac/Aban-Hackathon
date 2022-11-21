@@ -10,13 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_18_205956) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_22_181512) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "admins", force: :cascade do |t|
     t.string "name"
     t.string "password"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "artworks", force: :cascade do |t|
+    t.string "artwork"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -41,6 +47,18 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_18_205956) do
     t.string "cause"
     t.string "image_small"
     t.string "image_large"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "media", force: :cascade do |t|
+    t.string "media"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "supportfor_protestors", force: :cascade do |t|
+    t.string "support"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
