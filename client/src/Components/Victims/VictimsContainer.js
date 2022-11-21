@@ -3,6 +3,7 @@ import VictimCard from './VictimCard'
 import "./Victims.css";
 
 export default function VictimsContainer({english}) {
+  //holds the full set of data
   const [data, setData] = useState([])
   const [displayData, setDisplayData] = useState([])
   const [ageArray, setAgeArray] = useState([])

@@ -49,12 +49,13 @@
   
   .victims-preview-container {
     background-color: black;
-    margin-top: 8vh;
+    margin-top: 6vh;
     padding-left: auto;
     padding-right: auto;
     height: 40vh;
     width: 100%;
-    padding-top: 5%;
+    padding-top: 0%;
+    padding-bottom: 1rem;
   }
 
   .victims-link {
@@ -63,7 +64,6 @@
     font-family: 'Roboto', sans-serif;
     text-align: center;
     margin: auto;
-    padding-top: 2rem;
     text-decoration: none;
     text-decoration: underline white;
   }
@@ -72,27 +72,33 @@
     color: red;
   }
 
-  .victim-preview-cards {
-    width: 100%;
-    height:70%;
-    display: flex;
-    justify-content: space-evenly;
-  }
-
   .each-preview-card {
     background-color: rgb(72, 72, 72);
     width: 12vw;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
   }
 
   .each-victim-preview-image {
     width: 100%;
-    height: auto;
+    height: 100%;
   }
 
   .victim-name-preview {
     background-color: rgb(72, 72, 72);
-    margin-top: 2vh;
+    margin-top:0;
+    height: 3rem;
     text-align: center;
+    padding-top: .3rem;
+    padding-bottom: 0;
     font-family: 'Roboto', sans-serif;
     color: white;
+  }
+  .victim-preview-cards {
+    width: 80vw;
+    height:70%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
   }

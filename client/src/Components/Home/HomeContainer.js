@@ -52,9 +52,10 @@ export default function HomeContainer({english}) {
           {index<3&&<button onClick={()=>handleNextClick()} className='next-prev-button'>{english ? "Next" : "بعد" }</button>}
         </div>
       </div>
-      <VictimPreviewContainer english={english}/>
+      {/* <VictimPreviewContainer english={english}/> */}
     </div>
      </div>
+     <div><VictimPreviewContainer english={english}/></div>
     </>
   )
 }
