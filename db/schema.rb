@@ -45,10 +45,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_22_181512) do
     t.string "date"
     t.string "location"
     t.string "cause"
-    t.string "image_small"
-    t.string "image_large"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image_small"
+    t.string "image_large"
   end
 
   create_table "media", force: :cascade do |t|
