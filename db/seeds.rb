@@ -1,6 +1,9 @@
 require 'csv'
 Farsi.destroy_all
 English.destroy_all
+Medium.destroy_all
+Artwork.destroy_all
+SupportforProtestor.destroy_all
 puts 'seeding english'
 
 CSV.foreach('tmp/Abanhackathonenglish.csv', headers: true) do |row|
