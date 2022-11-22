@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :supportfor_protestors
+  resources :artworks
+  resources :media
   resources :admins
   resources :farsis
   resources :englishes

@@ -8,14 +8,14 @@ class FarsisController < ApplicationController
         render json: @farsi
     end
     def update
-        @farsi.update!(english_params)
+        @farsi.update!(farsi_params)
     end
     def destroy
         @farsi.destroy!
         head :no_content
     end
     def create
-        farsi = Farsi.create(english_params)
+        farsi = Farsi.create(farsi_params)
         render json: farsi
     end
     def preview

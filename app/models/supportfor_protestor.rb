@@ -1,0 +1,2 @@
+class SupportforProtestor < ApplicationRecord
+end
