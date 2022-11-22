@@ -70,7 +70,7 @@ export default function VictimsContainer({ english }) {
   }
   //fetches data based on language
   useEffect(() => {
-    fetch(`${language}`)
+    fetch(`/api${language}`)
       .then((res) => res.json())
       .then((data) => {
         setData(data);
