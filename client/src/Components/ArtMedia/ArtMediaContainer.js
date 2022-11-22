@@ -23,21 +23,27 @@ export default function ArtMediaContainer({english}) {
   }
 
   function handleFootageClick(){
-    setFootageShown(prev => !prev)
-    setArtworkShown(false)
-    setSupportShown(false)
+    if (!footageShown){
+      setFootageShown(prev => !prev)
+      setArtworkShown(false)
+      setSupportShown(false)
+    }
   }
 
   function handleArtworkClick(){
-    setArtworkShown(prev => !prev)
-    setFootageShown(false)
-    setSupportShown(false)
+    if (!artworkShown){
+      setArtworkShown(prev => !prev)
+      setFootageShown(false)
+      setSupportShown(false)
+    }
   }
 
   function handleSupportClick(){
-    setSupportShown(prev => !prev)
-    setFootageShown(false)
-    setArtworkShown(false)
+    if (!supportShown){
+      setSupportShown(prev => !prev)
+      setFootageShown(false)
+      setArtworkShown(false)
+    }
   }
 
   useEffect(() => {
