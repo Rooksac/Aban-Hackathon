@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
+
   namespace :api do
     resources :admins
     resources :farsis
     resources :englishes
+    resources :supportfor_protestors
+    resources :artworks
+    resources :media
     
     post '/login', to: 'admins#login'
     get '/me', to: 'admins#me'
@@ -12,4 +16,5 @@ Rails.application.routes.draw do
 
   get "*path", to: "fallback#index", constraint
   s: ->(req) { !req.xhr? && req.format.html? } 
+
 end
