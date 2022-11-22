@@ -4,7 +4,12 @@
     display: flex;
     justify-content: space-evenly;
 }
-
+@media (max-width: 600px){
+    .navbar {
+        flex-direction: column-reverse;
+        margin: 1rem;
+    }
+}
 .aban-title {
     color: white;
     margin-right: 10vw;
