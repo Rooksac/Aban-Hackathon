@@ -37,12 +37,8 @@
 }
 
 .search-bars {
-    width: 15vw;
-    display: inline;
     text-align: center;
-    margin-left: 32vw;
-    margin-right: 32vw;
-    margin-top: 2vh;
+   
 }
 
 @media (max-width: 600px){
@@ -77,5 +73,8 @@
 
 .whole-victims-container {
     margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 

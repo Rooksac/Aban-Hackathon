@@ -6,7 +6,7 @@
 }
 @media (max-width: 600px){
     .navbar {
-        flex-direction: column-reverse;
+        flex-direction: column;
         margin: 1rem;
     }
 }
