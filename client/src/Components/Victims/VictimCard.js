@@ -5,6 +5,7 @@ import Modal from '@mui/material/Modal';
 
 
 export default function VictimCard({victim}) {
+  //modal styling
   const style = {
     position: 'absolute',
     top: '50%',
@@ -20,6 +21,7 @@ export default function VictimCard({victim}) {
     textAlign: 'center',
     color: 'white'
   };
+  //modal logic
   const [open, setOpen] = useState(false);
   function handleOpen(){
     setOpen(true);

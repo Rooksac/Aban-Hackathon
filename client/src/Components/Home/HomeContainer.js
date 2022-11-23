@@ -4,7 +4,7 @@ import VictimPreviewContainer from './VictimPreviewContainer';
 
 
 export default function HomeContainer({english}) {
-
+//langing page text
   let words;
   if(english) { words = [
     "A series of nationwide civil protests in Iran, sometimes known as Bloody November or (using the Iranian calendar) Bloody Aban (Persian: آبان خونین) took place in 2019 and 2020. Initially caused by a 50–200% increase in fuel prices, they occurred as part of the wider Iranian Democracy Movement, leading to calls for the overthrow of the government in Iran and Supreme Leader Ali Khamenei. The protests commenced as peaceful gatherings on the evening of 15 November but spread to 21 cities within hours, as videos of the protest circulated online, eventually becoming the most violent and severe anti-government unrest since the rise of Iran's Islamic Republic in 1979.",
@@ -20,16 +20,14 @@ export default function HomeContainer({english}) {
     ]
   }
 
-  
+  //controls which paragraph of text is displayed
   const [index,setIndex]=useState(0)
-  
+  //cycles through paragraphs
   const handleNextClick=()=>{
     if(index < words.length-1){
       setIndex(index+ 1); 
-      console.log(index)
     } else {
       setIndex(0);
-      console.log(index)
     }
   }
 
@@ -52,7 +50,6 @@ export default function HomeContainer({english}) {
           {index<3&&<button onClick={()=>handleNextClick()} className='next-prev-button'>{english ? "Next" : "بعد" }</button>}
         </div>
       </div>
-      {/* <VictimPreviewContainer english={english}/> */}
     </div>
      </div>
      <div><VictimPreviewContainer english={english}/></div>

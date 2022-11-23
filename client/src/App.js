@@ -9,7 +9,7 @@ import AdminPage from './Components/AdminPage';
 import AdminLogin from './Components/AdminLogin';
 
 function App() {
-
+  //used to determine which language to display
   const [english, setEnglish] = useState(true)
 
   function handleLanguageChange(){
@@ -20,18 +20,15 @@ function App() {
     <>
     <div className="App">
       <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Protests_against_Ukraine_International_Airlines_Flight_752_shot_down_by_Sepah_in_Tehran_7.jpg" className='image'/>
-      {/* <React.Fragment>
-        <ToggleSwitch label="Language" handleLanguageChange={handleLanguageChange}/>
-      </React.Fragment> */}
       <div className='main-div-wrapper'>
       <div className='main-div-background'>
       <Navbar  handleLanguageChange={handleLanguageChange} english={english}/>
      <Routes>
-      <Route path = '/home' element = {<HomeContainer english={english} />} className='home-styling'/>
+      <Route path = '/' element = {<HomeContainer english={english} />} className='home-styling'/>
       <Route path = '/media' element = {<ArtMediaContainer english={english}/>} />
       <Route path = '/victims' element = {<VictimsContainer english = {english}/>} />
-      <Route path = '/admin' element = {<AdminLogin />} />
-      <Route path = '/newentryform' element = {<AdminPage />} />
+      {/* <Route path = '/admin' element = {<AdminLogin />} />
+      <Route path = '/newentryform' element = {<AdminPage />} /> */}
      </Routes>
      </div>
      </div>
