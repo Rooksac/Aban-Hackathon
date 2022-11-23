@@ -19,7 +19,13 @@ body {
     margin-right: 5vw;
     padding-top: 3vh;
     overflow: scroll;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
 }
+.main-div-background::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+  }
+  
 .each-victim-preview-image {
 background-color: black;
   }

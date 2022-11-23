@@ -18,8 +18,14 @@
     margin-top: 4vh;
     height: 68vh;
     overflow: scroll;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
     gap: 1rem;
 }
+
+.all-victims-div::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+  }
 
 .all-names {
     background-color: rgb(72, 72, 72);
@@ -30,8 +36,14 @@
     padding-top: .5rem;
     height: 2.5rem;
     overflow: scroll;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
 }
 
+.all-names::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+  }
+  
 .all-names:hover {
     color: red;
 }
