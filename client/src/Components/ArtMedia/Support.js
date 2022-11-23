@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Support({support}) {
+export default function Support({support, english}) {
   return (
-    <div style={{color: 'white'}}>
-      <a href={support.support} style={{color: 'white'}} target="_blank">Support</a>
+    <div className='media-tiles'>
+      <a href={support.support} target="_blank" className='anchor-tag-styling'>{english ? "Support Iranian protestors!" : "از معترضان ایرانی حمایت کنید"}</a>
     </div>
   )
 }

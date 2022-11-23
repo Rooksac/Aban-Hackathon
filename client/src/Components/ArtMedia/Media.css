@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 .art-media-button-div {
     display: flex;
     align-items: center;
@@ -36,7 +37,43 @@
     }
 
 .art-media-container-div {
+    width: 60vw;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 4vh;
+    padding: 1rem;
+    gap: 1rem;
+    overflow: scroll;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none; 
+}
+
+.art-media-container-div::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+  }
+
+.media-tiles {
+    background-color: white;
+    max-width: 7rem;
+    max-height: 7rem;
+    min-width: 7rem;
+    min-height: 7rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.anchor-tag-styling {
+    font-family: 'Permanent Marker', cursive;
+    color: black;
+    text-decoration: none;
+}
+
+.anchor-tag-styling:hover {
+    color: red;
 }

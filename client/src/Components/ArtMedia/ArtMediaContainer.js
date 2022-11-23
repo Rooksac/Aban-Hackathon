@@ -63,9 +63,9 @@ export default function ArtMediaContainer({english}) {
       <button onClick={handleSupportClick} className="media-buttons">{english ? "Supporting Protestors" : "حمایت از معترضان"}</button>
     </div>
     <div className='art-media-container-div'>
-      {footageShown ? mediaData.map((med) => (<Media key={med.id} med={med}/>)) : null} 
-      {artworkShown ? artData.map((art) => (<Artwork key={art.id} art={art}/>)): null}
-      {supportShown ? supportData.map((support) => (<Support key={support.id} support={support}/>)): null}
+      {footageShown ? mediaData.map((med) => (<Media key={med.id} med={med} english={english}/>)) : null} 
+      {artworkShown ? artData.map((art) => (<Artwork key={art.id} art={art} english={english}/>)): null}
+      {supportShown ? supportData.map((support) => (<Support key={support.id} support={support} english={english}/>)): null}
     </div>
     </>
   )
