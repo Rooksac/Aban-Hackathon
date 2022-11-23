@@ -1,10 +1,11 @@
 import React from 'react'
 
-export default function Media({med}) {
 
+export default function Media({med, english}) {
+ 
   return (
-    <div style={{color: 'white'}}>
-      <a href={med.media} style={{color: 'white'}} target="_blank">Media</a>
+    <div className='media-tiles'>
+      <a href={med.media} target="_blank" className='anchor-tag-styling'>{english ? "Click here to read about the protests!" : "برای خواندن اعتراضات اینجا را کلیک کنید!"} </a>
     </div>
   )
 }
