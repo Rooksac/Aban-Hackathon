@@ -21,22 +21,32 @@
   margin-top: 7vh;
 }
 
-.next-prev-button {
+.prev-button {
   background-color: transparent;
   border: none;
   border-bottom: 2px solid white;
   color: white;
   font-size: 1.2rem;
+  float: left;
+}
+
+.next-button {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  color: white;
+  font-size: 1.2rem;
+  float: right;
 }
 
 .next-prev-button:hover {
   color: red;
 }
 
-.prev-next-buttons {
+/* .prev-next-buttons {
   display: flex;
   justify-content: space-between;
-}
+} */
 .summary {
   font-size: 1.2rem;
 }
@@ -53,7 +63,7 @@
 }
 
 .victims-preview-container {
-  background-color: black;
+  /* background-color: black; */
   margin-top: 6vh;
   padding-left: auto;
   padding-right: auto;
