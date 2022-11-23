@@ -23,3 +23,5 @@ This project was made for ps752justice's Hackathon for Aban.  It is meant to ser
 - npm start
 
 
+**Homepage protest summary found on wikipedia
+
