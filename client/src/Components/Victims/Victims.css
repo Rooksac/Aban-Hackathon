@@ -37,16 +37,12 @@
 }
 
 .search-bars {
-    text-align: center;
-   
+    /* text-align: center; */
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
-@media (max-width: 600px){
-    .search-bars {
-        flex-direction: column-reverse;
-        margin: 1rem;
-    }
-}
 .search-field {
     margin-left: .5rem;
     margin-right: .5rem;
