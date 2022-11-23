@@ -45,9 +45,9 @@ export default function HomeContainer({english}) {
       <h1>{english ? "What happened?" : "چی شد؟"}</h1>
       <div className='flex_row'>
       <p className='summary'>{words[index]}<br/>{index+1}/4</p>
-        <div className='prev-next-buttons'>
-          {index>0&&<button onClick={()=>handlePrevClick()} className='next-prev-button'>{english ? "Previous" : "قبلی" }</button>}
-          {index<3&&<button onClick={()=>handleNextClick()} className='next-prev-button'>{english ? "Next" : "بعد" }</button>}
+        <div>
+          {index>0&&<button onClick={()=>handlePrevClick()} className='prev-button'>{english ? "Previous" : "قبلی" }</button>}
+          {index<3&&<button onClick={()=>handleNextClick()} className='next-button'>{english ? "Next" : "بعد" }</button>}
         </div>
       </div>
     </div>
